@@ -13,6 +13,7 @@ import FindPw from "./pages/findPw/FindPw";
 import Login from "./pages/login/Login";
 import MainPage from "./pages/mainPage/MainPage";
 import MakeCard from "./pages/makeCard/MakeCard";
+import MakeCardInfo from "./pages/makeCardInfo/MakeCardInfo";
 import Mypage from "./pages/mypage/Mypage";
 import ResultCard from "./pages/resultCard/ResultCard";
 import Signup from "./pages/signup/SignUp";
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path={"/findpw"} element={<FindPw />} />
       <Route path={"/questioncard"} element={<QuestionCard />} />
       <Route path={"/makecard"} element={<MakeCard />} />
+      <Route path={"/makecardinfo"} element={<MakeCardInfo />} />
       <Route path={"/resultcard"} element={<ResultCard />} />
     </Route>,
   ),

@@ -375,6 +375,24 @@ const Replay = ({ size = 24, color = "white", style }: IconsProps) => {
   );
 };
 
+const Plus = ({ size = 24, color = "white", style }: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      viewBox="0 0 12 12"
+      fill="none"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6 0.5C6.27614 0.5 6.5 0.723858 6.5 1V5.5H11C11.2761 5.5 11.5 5.72386 11.5 6C11.5 6.27614 11.2761 6.5 11 6.5H6.5V11C6.5 11.2761 6.27614 11.5 6 11.5C5.72386 11.5 5.5 11.2761 5.5 11V6.5H1C0.723858 6.5 0.5 6.27614 0.5 6C0.5 5.72386 0.723858 5.5 1 5.5H5.5V1C5.5 0.723858 5.72386 0.5 6 0.5Z"
+        fill={color}
+      />
+    </svg>
+  );
+};
+
 Icons.Logo = Logo;
 Icons.Search = Search;
 Icons.Logo = Logo;
@@ -398,5 +416,5 @@ Icons.ArrowDown = ArrowDown;
 Icons.Timer = Timer;
 Icons.Click = Click;
 Icons.Replay = Replay;
-
+Icons.Plus = Plus;
 export default Icons;
