@@ -59,9 +59,9 @@ const Signup = () => {
           />
         </Button>
         <Button
-          width={"200px"}
+          width={"270px"}
           height={"40px"}
-          variant={ButtonVariant.contained}
+          variant={ButtonVariant.contained2}
           type="button"
           onClick={() => {
             handleSignUp();

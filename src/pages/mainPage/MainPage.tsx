@@ -13,10 +13,11 @@ const MainPage = () => {
         alignItems={"center"}
         gap={"10px"}
         style={{
-          border: `2px solid ${colorSet.secondaryText}`,
+          background: colorSet.search,
+          //  border: `2px solid ${colorSet.secondaryText}`,
           padding: "0.1rem 1rem",
           borderRadius: "1rem",
-          marginRight: "40px",
+          // marginRight: "40px",
         }}
       >
         <Icons.Search size={30} color={colorSet.secondaryText} />

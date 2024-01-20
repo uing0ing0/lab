@@ -61,13 +61,13 @@ const ResultCard = () => {
           <Button variant={ButtonVariant.outlined}>페북</Button>
           <Button variant={ButtonVariant.outlined}>카톡</Button>
         </Grid>
-        <Button width="350px" variant={ButtonVariant.contained}>
+        <Button width="350px" variant={ButtonVariant.contained3}>
           <Text size={"0.9rem"}>또 질문하기</Text>
         </Button>
-        <Button width="350px" variant={ButtonVariant.contained}>
+        <Button width="350px" variant={ButtonVariant.contained3}>
           <Text size={"0.9rem"}>해결책의 모든 답변보기</Text>
         </Button>
-        <Button width="350px" variant={ButtonVariant.contained}>
+        <Button width="350px" variant={ButtonVariant.contained2}>
           <Text size={"0.9rem"}>다른 해결책에 질문하러 가기</Text>
         </Button>
       </Flex>
