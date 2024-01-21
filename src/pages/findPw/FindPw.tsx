@@ -59,7 +59,7 @@ const Login = () => {
           />
         </Button>
         <Button
-          variant={ButtonVariant.contained}
+          variant={ButtonVariant.contained2}
           width={"250px"}
           height={"40px"}
           type="submit"

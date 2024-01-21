@@ -6,6 +6,9 @@ import colorSet from "../../styles/colorSet";
 export enum ButtonVariant {
   outlined = "outlined",
   contained = "contained",
+  contained2 = "contained2",
+  contained21 = "contained21",
+  contained3 = "contained3",
   navbar = "navbar",
   navbarChild = "navbarChild",
   taskItem = "taskItem",
@@ -46,6 +49,7 @@ const Button = styled.button<ButtonProps>`
       case ButtonVariant.outlined:
         return css`
           border: 1px solid ${colorSet.primary};
+          border-radius: 20px;
           color: ${colorSet.primary};
 
           :hover {
@@ -54,10 +58,43 @@ const Button = styled.button<ButtonProps>`
         `;
       case ButtonVariant.contained:
         return css`
+          border: 1px solid ${colorSet.primary};
+          border-radius: 20px;
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
 
           :hover {
+            box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
+          }
+        `;
+      case ButtonVariant.contained2:
+        return css`
+          border: 1px solid ${colorSet.primary};
+          border-radius: 20px;
+          background-color: ${colorSet.pprimary};
+          color: ${colorSet.colorless};
+
+          :hover {
+            box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
+          }
+        `;
+      case ButtonVariant.contained21:
+        return css`
+          border-radius: 10px;
+          background-color: ${colorSet.pprimary};
+          color: ${colorSet.colorless};
+
+          :hover {
+            box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
+          }
+        `;
+      case ButtonVariant.contained3:
+        return css`
+          border: 1px solid ${colorSet.primary};
+          border-radius: 20px;
+          background-color: ${colorSet.secondary};
+          color: ${colorSet.text};
+          s :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
           }
         `;
