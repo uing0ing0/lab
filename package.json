@@ -49,5 +49,6 @@
     "vite-tsconfig-paths": "^4.0.3"
   },
   "packageManager": "yarn@4.0.2",
-  "proxy": "https://dev-api.nomini.io"
+  "proxy": "https://dev-api.nomini.io",
+  "homepage": "https://main--poetic-crisp-bd1ae0.netlify.app/"
 }
