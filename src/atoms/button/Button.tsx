@@ -6,12 +6,12 @@ import colorSet from "../../styles/colorSet";
 export enum ButtonVariant {
   outlined = "outlined",
   contained = "contained",
-  contained2 = "contained2",
-  contained21 = "contained21",
-  contained3 = "contained3",
+  grey = "grey",
   navbar = "navbar",
   navbarChild = "navbarChild",
   taskItem = "taskItem",
+  x = "x",
+  o = "o",
 }
 
 interface ButtonProps {
@@ -49,7 +49,6 @@ const Button = styled.button<ButtonProps>`
       case ButtonVariant.outlined:
         return css`
           border: 1px solid ${colorSet.primary};
-          border-radius: 20px;
           color: ${colorSet.primary};
 
           :hover {
@@ -58,43 +57,44 @@ const Button = styled.button<ButtonProps>`
         `;
       case ButtonVariant.contained:
         return css`
-          border: 1px solid ${colorSet.primary};
-          border-radius: 20px;
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
-
+          border-radius: 25px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          bottom: 70px;
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
           }
+          justify-content: center;
         `;
-      case ButtonVariant.contained2:
+
+      case ButtonVariant.o:
         return css`
-          border: 1px solid ${colorSet.primary};
-          border-radius: 20px;
-          background-color: ${colorSet.pprimary};
+          background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
+          border-radius: 25px;
+          position: absolute;
+
+          bottom: 70px;
+          transform: translate(5%);
 
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
           }
         `;
-      case ButtonVariant.contained21:
+      case ButtonVariant.x:
         return css`
-          border-radius: 10px;
-          background-color: ${colorSet.pprimary};
+          background-color: ${colorSet.deselected};
           color: ${colorSet.colorless};
+          border-radius: 25px;
+          position: absolute;
+
+          bottom: 70px;
+          transform: translate(130%);
 
           :hover {
-            box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
-          }
-        `;
-      case ButtonVariant.contained3:
-        return css`
-          border: 1px solid ${colorSet.primary};
-          border-radius: 20px;
-          background-color: ${colorSet.secondary};
-          color: ${colorSet.text};
-          s :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
           }
         `;

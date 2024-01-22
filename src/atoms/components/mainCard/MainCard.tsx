@@ -8,7 +8,6 @@ import Button, { ButtonVariant } from "src/atoms/button/Button";
 import Flex from "src/atoms/containers/flex/Flex";
 import Grid from "src/atoms/containers/grid/Grid";
 import Text from "src/atoms/text/Text";
-import Font from "src/styles/Font";
 import colorSet from "src/styles/colorSet";
 const MainCard = styled.div<PanelProps>`
   background-color: ${({ color }) => color};
@@ -31,8 +30,8 @@ const MainCardPic = () => {
   };
   return (
     <MainCard
-      color={"#f8f8f8"}
-      style={{ width: "400px", height: "100px", borderRadius: "10px" }}
+      color={"#fff"}
+      style={{ width: "400px", height: "100px" }}
       onClick={handleClick}
     >
       <Grid
@@ -47,28 +46,19 @@ const MainCardPic = () => {
           <Image src={"https://picsum.photos/100/100"} />
         </Flex>
         <Flex>
-          <Text font={Font.Bold} color={colorSet.text} size={"1.1rem"}>
+          <Text color={colorSet.text} size={"1.1rem"}>
             명탐정 코난이 알려주는 해결책
           </Text>
-          <div
-            style={{
-              borderBottom: `5px solid ${colorSet.text}`,
-              marginBottom: "10px",
-            }}
-          ></div>
           <Text color={colorSet.text} size={"0.9rem"}>
             쉽덕의 심금을 울리는 명언 모아놨다
           </Text>
-          <Flex flexDirection="column" justify-content={"flex-end"}>
-            {" "}
-            <Button
-              width={"100px"}
-              height={"25px"}
-              variant={ButtonVariant.contained21}
-            >
-              <Text size={"0.7rem"}>공유하기</Text>
-            </Button>
-          </Flex>
+          <Button
+            width={"100px"}
+            height={"35px"}
+            variant={ButtonVariant.outlined}
+          >
+            <Text size={"0.9rem"}>공유하기</Text>
+          </Button>
         </Flex>
       </Grid>
     </MainCard>

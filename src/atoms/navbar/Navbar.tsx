@@ -87,28 +87,11 @@ const Navbar = () => {
             gap={"10px"}
           >
             <Text size="1.1rem" font={Font.Bold}>
-              레전드해결책
+              Main
             </Text>
           </Flex>
         </StylelessLink>
-        <MenuSum>
-          <Button variant={ButtonVariant.navbar} onClick={handleMake}>
-            <Text>레전드해결책 만들기</Text>
-          </Button>
-          <Button variant={ButtonVariant.navbar}>
-            {/* name이 비어있지 않으면 name을 보여주는 부분 */}
-            {userName !== "" && (
-              <Text onClick={handleLogout}>로그아웃{userName}</Text>
-            )}
-
-            {/* login 버튼, name이 비어있을 때만 클릭 가능하도록 설정 */}
-            {userName === "" && (
-              <Text style={{ marginLeft: "auto" }} onClick={handleLogin}>
-                로그인
-              </Text>
-            )}
-          </Button>
-        </MenuSum>
+        <MenuSum></MenuSum>
       </Bar>
     </>
   );
