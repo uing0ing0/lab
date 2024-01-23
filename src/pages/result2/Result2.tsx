@@ -62,7 +62,7 @@ const QuestionCard = () => {
   //const prevPath: string | null = storage?.getItem("prevPath");
 
   let audioSrc;
-  console.log("refererPage:", prevPath);
+  console.log("refererPage:", document.referrer);
 
   if (prevPath !== null) {
     if (prevPath.includes("/q1")) {
