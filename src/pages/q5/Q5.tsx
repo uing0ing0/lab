@@ -58,6 +58,10 @@ const QuestionCard = () => {
     console.log("Submit");
     navigate("/q6");
   };
+  const handleX = () => {
+    console.log("Submit");
+    navigate("/result2");
+  };
 
   return (
     <>
@@ -118,7 +122,7 @@ const QuestionCard = () => {
               </Text>
             </Button>
             <Button
-              onClick={handleSubmit}
+              onClick={handleX}
               width="130px"
               height="50px"
               variant={ButtonVariant.x}

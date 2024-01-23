@@ -57,6 +57,33 @@ const QuestionCard = () => {
     navigate("/q1");
   };
 
+  const storage = globalThis?.sessionStorage;
+  const prevPath = storage?.getItem("prevPath");
+  //const prevPath: string | null = storage?.getItem("prevPath");
+
+  let audioSrc;
+  console.log("refererPage:", prevPath);
+
+  if (prevPath !== null) {
+    if (prevPath.includes("/q1")) {
+      audioSrc = "/q1/1.mp3";
+    } else if (prevPath.includes("/q2")) {
+      audioSrc = "/q2/2.mp3";
+    } else if (prevPath.includes("/q3")) {
+      audioSrc = "/q3/3.mp3";
+    } else if (prevPath.includes("/q4")) {
+      audioSrc = "/q4/4.mp3";
+    } else if (prevPath.includes("/q5")) {
+      audioSrc = "/q5/5.mp3";
+    } else if (prevPath.includes("/q6")) {
+      audioSrc = "/q6/6.mp3";
+    } else {
+      audioSrc = "/q7/7.mp3";
+    }
+    console.log("refererPage:", prevPath);
+    console.log("audioSrc:", audioSrc);
+  }
+
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
@@ -88,14 +115,13 @@ const QuestionCard = () => {
             <br />
             <br />
           </Text>
-          <audio ref={audioRef} src="/q1/1.mp3" />
+          <audio ref={audioRef} src={audioSrc} />
           <button
             style={{ width: "100px", height: "55px", border: "none" }}
             onClick={togglePlayPause}
           >
             {isPlaying ? <CiPause1 /> : <CiPlay1 />}
           </button>
-
           <Button
             onClick={handleSubmit}
             width="220px"

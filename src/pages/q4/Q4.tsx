@@ -58,6 +58,11 @@ const QuestionCard = () => {
     console.log("Submit");
     navigate("/q5");
   };
+  const handleX = () => {
+    console.log("Submit");
+    navigate("/result2");
+  };
+  console.log("r:", document.referrer);
 
   return (
     <>
@@ -118,7 +123,7 @@ const QuestionCard = () => {
               </Text>
             </Button>
             <Button
-              onClick={handleSubmit}
+              onClick={handleX}
               width="130px"
               height="50px"
               variant={ButtonVariant.x}
