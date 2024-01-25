@@ -1,15 +1,16 @@
+import React, { useRef, useState } from "react";
+import { CiPlay1 } from "react-icons/ci";
+import { CiPause1 } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Button, { ButtonVariant } from "src/atoms/button/Button";
 import Flex from "src/atoms/containers/flex/Flex";
+import Image from "src/atoms/image/Image";
 import SearchInput from "src/atoms/searchInput/SearchInput";
 import Text from "src/atoms/text/Text";
 import colorSet from "src/styles/colorSet";
-import styled, { CSSProperties } from "styled-components";
-import React, { useRef, useState } from "react";
 import Font from "src/styles/Font";
-import Image from "src/atoms/image/Image";
-import { CiPlay1 } from "react-icons/ci";
-import { CiPause1 } from "react-icons/ci";
+import styled, { CSSProperties } from "styled-components";
 
 interface PanelProps {
   color?: CSSProperties["backgroundColor"];
@@ -57,33 +58,6 @@ const QuestionCard = () => {
     navigate("/q1");
   };
 
-  const storage = globalThis?.sessionStorage;
-  const prevPath = storage?.getItem("prevPath");
-  //const prevPath: string | null = storage?.getItem("prevPath");
-
-  let audioSrc;
-  console.log("refererPage:", document.referrer);
-
-  if (prevPath !== null) {
-    if (prevPath.includes("/q1")) {
-      audioSrc = "/q1/1.mp3";
-    } else if (prevPath.includes("/q2")) {
-      audioSrc = "/q2/2.mp3";
-    } else if (prevPath.includes("/q3")) {
-      audioSrc = "/q3/3.mp3";
-    } else if (prevPath.includes("/q4")) {
-      audioSrc = "/q4/4.mp3";
-    } else if (prevPath.includes("/q5")) {
-      audioSrc = "/q5/5.mp3";
-    } else if (prevPath.includes("/q6")) {
-      audioSrc = "/q6/6.mp3";
-    } else {
-      audioSrc = "/q7/7.mp3";
-    }
-    console.log("refererPage:", prevPath);
-    console.log("audioSrc:", audioSrc);
-  }
-
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
@@ -115,7 +89,7 @@ const QuestionCard = () => {
             <br />
             <br />
           </Text>
-          <audio ref={audioRef} src={audioSrc} />
+          <audio ref={audioRef} src="musics\result\case2.mp3" />
           <button
             style={{ width: "100px", height: "55px", border: "none" }}
             onClick={togglePlayPause}

@@ -1,5 +1,6 @@
 import "./App.css";
 
+//import { MyProvider } from './MyContext.tsx';
 //import ReactGA from "react-ga";
 import {
   createBrowserRouter,
@@ -7,7 +8,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-
+import Loading from "src/pages/loading/Loading";
 //import QuestionCard from "src/pages/questionCard/QuestionCard";
 import P1 from "src/pages/p1/P1";
 import P2 from "src/pages/p2/P2";
@@ -20,6 +21,12 @@ import Q5 from "src/pages/q5/Q5";
 import Q6 from "src/pages/q6/Q6";
 import Result from "src/pages/result/Result";
 import Result2 from "src/pages/result2/Result2";
+import Result3 from "src/pages/result3/Result3";
+import Result4 from "src/pages/result4/Result4";
+import Result5 from "src/pages/result5/Result5";
+import Result6 from "src/pages/result6/Result6";
+import Result7 from "src/pages/result7/Result7";
+
 import Layout from "./template/layout/Layout";
 
 //const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID || "";
@@ -38,8 +45,14 @@ const router = createBrowserRouter(
       <Route path={"/q4"} element={<Q4 />} />
       <Route path={"/q5"} element={<Q5 />} />
       <Route path={"/q6"} element={<Q6 />} />
+      <Route path={"/loading"} element={<Loading />} />
       <Route path={"/result"} element={<Result />} />
       <Route path={"/result2"} element={<Result2 />} />
+      <Route path={"/result3"} element={<Result3 />} />
+      <Route path={"/result4"} element={<Result4 />} />
+      <Route path={"/result5"} element={<Result5 />} />
+      <Route path={"/result6"} element={<Result6 />} />
+      <Route path={"/result7"} element={<Result7 />} />
     </Route>,
   ),
 );

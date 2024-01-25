@@ -1,15 +1,16 @@
+import React, { useRef, useState } from "react";
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { FaRegCirclePause } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Button, { ButtonVariant } from "src/atoms/button/Button";
 import Flex from "src/atoms/containers/flex/Flex";
+import Image from "src/atoms/image/Image";
 import SearchInput from "src/atoms/searchInput/SearchInput";
 import Text from "src/atoms/text/Text";
 import colorSet from "src/styles/colorSet";
-import styled, { CSSProperties } from "styled-components";
-import React, { useRef, useState } from "react";
 import Font from "src/styles/Font";
-import Image from "src/atoms/image/Image";
-import { FaRegCirclePlay } from "react-icons/fa6";
-import { FaRegCirclePause } from "react-icons/fa6";
+import styled, { CSSProperties } from "styled-components";
 
 interface PanelProps {
   color?: CSSProperties["backgroundColor"];
@@ -39,6 +40,7 @@ const BookCard = styled.div<PanelProps>`
 
 const QuestionCard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -59,10 +61,10 @@ const QuestionCard = () => {
     navigate("/q2");
   };
   const handleX = () => {
-    console.log("Submit");
-    navigate("/result2");
+    console.log("Submit", location.pathname);
+    navigate("/result");
   };
-  console.log(document.referrer);
+
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
@@ -94,7 +96,7 @@ const QuestionCard = () => {
             <br />
           </Text>
 
-          <audio ref={audioRef} src="D:\soundweb\soundweb\public\1.mp3" />
+          <audio ref={audioRef} src="musics\test\250Hz.mp3" />
           <button
             style={{
               color: "#ffffff",

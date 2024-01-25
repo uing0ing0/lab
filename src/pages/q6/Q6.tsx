@@ -56,11 +56,11 @@ const QuestionCard = () => {
 
   const handleSubmit = () => {
     console.log("Submit");
-    navigate("/result");
+    navigate("/result7");
   };
   const handleX = () => {
     console.log("Submit");
-    navigate("/result2");
+    navigate("/result6");
   };
 
   return (
@@ -94,7 +94,7 @@ const QuestionCard = () => {
             <br />
           </Text>
 
-          <audio ref={audioRef} src="D:\soundweb\soundweb\public\1.mp3" />
+          <audio ref={audioRef} src="musics/test/8000Hz.mp3" />
           <button
             style={{
               color: "#ffffff",
