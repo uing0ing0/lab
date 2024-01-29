@@ -60,7 +60,7 @@ const Button = styled.button<ButtonProps>`
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
           border-radius: 25px;
-          position: absolute;
+
           left: 50%;
           transform: translate(-50%);
           bottom: 70px;
@@ -75,7 +75,6 @@ const Button = styled.button<ButtonProps>`
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
           border-radius: 25px;
-          position: absolute;
 
           bottom: 70px;
           transform: translate(5%);
@@ -89,7 +88,6 @@ const Button = styled.button<ButtonProps>`
           background-color: ${colorSet.deselected};
           color: ${colorSet.colorless};
           border-radius: 25px;
-          position: absolute;
 
           bottom: 70px;
           transform: translate(130%);

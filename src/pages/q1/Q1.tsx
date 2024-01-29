@@ -67,30 +67,29 @@ const QuestionCard = () => {
 
   return (
     <>
+      <Text
+        textAlign="left"
+        color={colorSet.text}
+        size={"1.3rem"}
+        font={Font.Bold}
+      >
+        <br />
+        설정단계
+        <br />
+        Step 1
+      </Text>
+      <Text
+        textAlign="left"
+        color={colorSet.secondaryText}
+        size={"0.8rem"}
+        font={Font.Bold}
+      >
+        <br />
+        소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
+        <br />
+        <br />
+      </Text>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <Text
-          textAlign="left"
-          color={colorSet.text}
-          size={"1.3rem"}
-          font={Font.Bold}
-        >
-          <br />
-          설정단계
-          <br />
-          Step 1
-        </Text>
-        <Text
-          textAlign="left"
-          color={colorSet.secondaryText}
-          size={"0.8rem"}
-          font={Font.Bold}
-        >
-          <br />
-          소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
-          <br />
-          <br />
-        </Text>
-
         <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
           <br />
         </Text>
@@ -111,7 +110,7 @@ const QuestionCard = () => {
             <FaRegCirclePlay size="100" color="#959595" />
           )}
         </button>
-        <Flex gap="20px">
+        <Flex gap="80px" justifyContent="center">
           <Button
             onClick={handleSubmit}
             width="130px"

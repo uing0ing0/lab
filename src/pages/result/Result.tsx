@@ -141,37 +141,32 @@ const QuestionCard = () => {
         <progress
           value={currentTime}
           max={duration}
-          style={{ width: "100%" }}
+          style={{ width: "80%" }}
         ></progress>
-        <div
-          style={{
-            color: "black",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <Flex gap="180px">
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
-        </div>
-
-        <button
-          style={{ width: "100px", height: "55px", border: "none" }}
-          onClick={() => handleSeek(false)}
-        >
-          <IoPlayBack />
-        </button>
-        <button
-          style={{ width: "100px", height: "55px", border: "none" }}
-          onClick={togglePlayPause}
-        >
-          {isPlaying ? <CiPause1 /> : <CiPlay1 />}
-        </button>
-        <button
-          style={{ width: "100px", height: "55px", border: "none" }}
-          onClick={() => handleSeek(true)}
-        >
-          <IoPlayForward />
-        </button>
+        </Flex>
+        <Flex gap="20px">
+          <button
+            style={{ width: "100px", height: "55px", border: "none" }}
+            onClick={() => handleSeek(false)}
+          >
+            <IoPlayBack />
+          </button>
+          <button
+            style={{ width: "100px", height: "55px", border: "none" }}
+            onClick={togglePlayPause}
+          >
+            {isPlaying ? <CiPause1 /> : <CiPlay1 />}
+          </button>
+          <button
+            style={{ width: "100px", height: "55px", border: "none" }}
+            onClick={() => handleSeek(true)}
+          >
+            <IoPlayForward />
+          </button>
+        </Flex>
 
         <Button
           onClick={handleSubmit}
