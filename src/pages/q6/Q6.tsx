@@ -1,15 +1,15 @@
+import React, { useRef, useState } from "react";
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { FaRegCirclePause } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import Button, { ButtonVariant } from "src/atoms/button/Button";
 import Flex from "src/atoms/containers/flex/Flex";
+import Image from "src/atoms/image/Image";
 import SearchInput from "src/atoms/searchInput/SearchInput";
 import Text from "src/atoms/text/Text";
 import colorSet from "src/styles/colorSet";
-import styled, { CSSProperties } from "styled-components";
-import React, { useRef, useState } from "react";
 import Font from "src/styles/Font";
-import Image from "src/atoms/image/Image";
-import { FaRegCirclePlay } from "react-icons/fa6";
-import { FaRegCirclePause } from "react-icons/fa6";
+import styled, { CSSProperties } from "styled-components";
 
 interface PanelProps {
   color?: CSSProperties["backgroundColor"];

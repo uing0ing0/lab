@@ -41,26 +41,24 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"500px"}>
-          <Text color={colorSet.primary} size={"3.0rem"} font={Font.Bold}>
-            <br />
-            <br />
-            OralFlow
-            <br />
-            Sound
-            <br />
-            <br />
-            <br />
-          </Text>
-          <Button
-            onClick={handleSubmit}
-            width="220px"
-            height="50px"
-            variant={ButtonVariant.contained}
-          >
-            <Text size={"1.3rem"}>Start</Text>
-          </Button>
-        </BookCard>
+        <Text color={colorSet.primary} size={"3.0rem"} font={Font.Bold}>
+          <br />
+          <br />
+          OralFlow
+          <br />
+          Sound
+          <br />
+          <br />
+          <br />
+        </Text>
+        <Button
+          onClick={handleSubmit}
+          width="220px"
+          height="50px"
+          variant={ButtonVariant.contained}
+        >
+          <Text size={"1.3rem"}>Start</Text>
+        </Button>
       </Flex>
     </>
   );
