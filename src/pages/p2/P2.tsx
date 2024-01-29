@@ -58,9 +58,7 @@ const QuestionCard = () => {
           <Image
             maxWidth="100%"
             width="calc(100% - 30px)"
-            src={
-              "https://postfiles.pstatic.net/MjAyNDAxMTdfMTA4/MDAxNzA1NDU2OTczNTU1.9Xp16Junvv6HC2wGkNuNCFsWewH7ziYRGIxdTlaqfeEg.TS3RWULiFGydttZw-aiE9VukLkyngcAdKCdLNE8wYjsg.PNG.sksmsdmsdud91/11.png?type=w966"
-            }
+            src={"images/11.png"}
           />
           <Text color={colorSet.secondaryText} size={"0.8rem"}>
             <br />
