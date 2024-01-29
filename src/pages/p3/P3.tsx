@@ -43,44 +43,42 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"500px"}>
-          <Text
-            textAlign="left"
-            color={colorSet.text}
-            size={"1.3rem"}
-            font={Font.Bold}
-          >
-            <br />
-            준비단계
-            <br />
-          </Text>
-          <Text
-            textAlign="left"
-            color={colorSet.secondaryText}
-            size={"0.8rem"}
-            font={Font.Bold}
-          >
-            <br />
-            소리 크기가 충분한지
-            <br /> 확인해주세요.
-            <br />
-            <br />
-          </Text>
-          <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
-            <br />
-          </Text>
+        <Text
+          textAlign="left"
+          color={colorSet.text}
+          size={"1.3rem"}
+          font={Font.Bold}
+        >
+          <br />
+          준비단계
+          <br />
+        </Text>
+        <Text
+          textAlign="left"
+          color={colorSet.secondaryText}
+          size={"0.8rem"}
+          font={Font.Bold}
+        >
+          <br />
+          소리 크기가 충분한지
+          <br /> 확인해주세요.
+          <br />
+          <br />
+        </Text>
+        <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
+          <br />
+        </Text>
 
-          <GrVolumeControl size="180" color="#959595" />
+        <GrVolumeControl size="180" color="#959595" />
 
-          <Button
-            onClick={handleSubmit}
-            width="220px"
-            height="50px"
-            variant={ButtonVariant.contained}
-          >
-            <Text size={"1.1rem"}>확인</Text>
-          </Button>
-        </BookCard>
+        <Button
+          onClick={handleSubmit}
+          width="220px"
+          height="50px"
+          variant={ButtonVariant.contained}
+        >
+          <Text size={"1.1rem"}>확인</Text>
+        </Button>
       </Flex>
     </>
   );

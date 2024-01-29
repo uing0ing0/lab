@@ -42,40 +42,38 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"500px"}>
-          <Text
-            textAlign="left"
-            color={colorSet.text}
-            size={"1.3rem"}
-            font={Font.Bold}
-          >
-            <br />
-            <br />
-            준비단계
-            <br />
-            <br />
-          </Text>
-          <Image
-            maxWidth="100%"
-            width="calc(100% - 30px)"
-            src={"images/11.png"}
-          />
-          <Text color={colorSet.secondaryText} size={"0.8rem"}>
-            <br />
-            <br />
-            블루투스와 연결 되었나요?
-            <br />
-          </Text>
+        <Text
+          textAlign="left"
+          color={colorSet.text}
+          size={"1.3rem"}
+          font={Font.Bold}
+        >
+          <br />
+          <br />
+          준비단계
+          <br />
+          <br />
+        </Text>
+        <Image
+          maxWidth="100%"
+          width="calc(100% - 30px)"
+          src={"images/11.png"}
+        />
+        <Text color={colorSet.secondaryText} size={"0.8rem"}>
+          <br />
+          <br />
+          블루투스와 연결 되었나요?
+          <br />
+        </Text>
 
-          <Button
-            onClick={handleSubmit}
-            width="220px"
-            height="50px"
-            variant={ButtonVariant.contained}
-          >
-            <Text size={"1.1rem"}>확인</Text>
-          </Button>
-        </BookCard>
+        <Button
+          onClick={handleSubmit}
+          width="220px"
+          height="50px"
+          variant={ButtonVariant.contained}
+        >
+          <Text size={"1.1rem"}>확인</Text>
+        </Button>
       </Flex>
     </>
   );

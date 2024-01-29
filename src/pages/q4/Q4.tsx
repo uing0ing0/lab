@@ -66,71 +66,69 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"500px"}>
-          <Text
-            textAlign="left"
-            color={colorSet.text}
-            size={"1.3rem"}
-            font={Font.Bold}
-          >
-            <br />
-            설정단계
-            <br />
-            Step 4
-          </Text>
-          <Text
-            textAlign="left"
-            color={colorSet.secondaryText}
-            size={"0.8rem"}
-            font={Font.Bold}
-          >
-            <br />
-            소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
-            <br />
-            <br />
-          </Text>
+        <Text
+          textAlign="left"
+          color={colorSet.text}
+          size={"1.3rem"}
+          font={Font.Bold}
+        >
+          <br />
+          설정단계
+          <br />
+          Step 4
+        </Text>
+        <Text
+          textAlign="left"
+          color={colorSet.secondaryText}
+          size={"0.8rem"}
+          font={Font.Bold}
+        >
+          <br />
+          소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
+          <br />
+          <br />
+        </Text>
 
-          <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
-            <br />
-          </Text>
+        <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
+          <br />
+        </Text>
 
-          <audio ref={audioRef} src="musics\test\2000Hz.mp3" />
-          <button
-            style={{
-              color: "#ffffff",
-              width: "150px",
-              height: "150px",
-              border: "none",
-            }}
-            onClick={togglePlayPause}
+        <audio ref={audioRef} src="musics\test\2000Hz.mp3" />
+        <button
+          style={{
+            color: "#ffffff",
+            width: "150px",
+            height: "150px",
+            border: "none",
+          }}
+          onClick={togglePlayPause}
+        >
+          {isPlaying ? (
+            <FaRegCirclePause size="100" color="#959595" />
+          ) : (
+            <FaRegCirclePlay size="100" color="#959595" />
+          )}
+        </button>
+        <Flex gap="20px">
+          <Button
+            onClick={handleSubmit}
+            width="130px"
+            height="50px"
+            variant={ButtonVariant.o}
           >
-            {isPlaying ? (
-              <FaRegCirclePause size="100" color="#959595" />
-            ) : (
-              <FaRegCirclePlay size="100" color="#959595" />
-            )}
-          </button>
-          <Flex gap="20px">
-            <Button
-              onClick={handleSubmit}
-              width="130px"
-              height="50px"
-              variant={ButtonVariant.o}
-            >
-              <Text color={colorSet.colorless} size={"1.0rem"}>
-                O
-              </Text>
-            </Button>
-            <Button
-              onClick={handleX}
-              width="130px"
-              height="50px"
-              variant={ButtonVariant.x}
-            >
-              <Text size={"1.0rem"}>X</Text>
-            </Button>
-          </Flex>
-        </BookCard>
+            <Text color={colorSet.colorless} size={"1.0rem"}>
+              O
+            </Text>
+          </Button>
+          <Button
+            onClick={handleX}
+            width="130px"
+            height="50px"
+            variant={ButtonVariant.x}
+          >
+            <Text size={"1.0rem"}>X</Text>
+          </Button>
+        </Flex>
       </Flex>
     </>
   );

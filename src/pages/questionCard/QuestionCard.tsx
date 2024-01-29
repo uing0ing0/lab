@@ -41,12 +41,10 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"400px"}>
-          <Image src={"https://picsum.photos/200/350"} />
-          <Text color={colorSet.secondaryText} size={"1.2rem"}>
-            진실은 언제나 빛나고 있어
-          </Text>
-        </BookCard>
+        <Image src={"https://picsum.photos/200/350"} />
+        <Text color={colorSet.secondaryText} size={"1.2rem"}>
+          진실은 언제나 빛나고 있어
+        </Text>
         <Flex
           wrap={"nowrap"}
           width={"320px"}

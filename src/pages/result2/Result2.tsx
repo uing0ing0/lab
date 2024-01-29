@@ -61,50 +61,48 @@ const QuestionCard = () => {
   return (
     <>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <BookCard width={"300px"} height={"500px"}>
-          <Text
-            textAlign="left"
-            color={colorSet.text}
-            size={"1.3rem"}
-            font={Font.Bold}
-          >
-            <br />
-            음악감상
-            <br />
-            <br />
-            <br />
-          </Text>
-          <Image
-            src={"https://cdn-icons-png.flaticon.com/512/3771/3771046.png"}
-            width={100}
-          />
-          <Text
-            textAlign="center"
-            color={colorSet.text}
-            size={"1.0rem"}
-            font={Font.Bold}
-          >
-            <br />
-            노래 이름
-            <br />
-            <br />
-          </Text>
-          <audio ref={audioRef} src="musics\result\case2.mp3" />
-          <button
-            style={{ width: "100px", height: "55px", border: "none" }}
-            onClick={togglePlayPause}
-          >
-            {isPlaying ? <CiPause1 /> : <CiPlay1 />}
-          </button>
-          <Button
-            onClick={handleSubmit}
-            width="220px"
-            height="50px"
-            variant={ButtonVariant.contained}
-          >
-            <Text size={"1.3rem"}>다시하기</Text>
-          </Button>
-        </BookCard>
+        <Text
+          textAlign="left"
+          color={colorSet.text}
+          size={"1.3rem"}
+          font={Font.Bold}
+        >
+          <br />
+          음악감상
+          <br />
+          <br />
+          <br />
+        </Text>
+        <Image
+          src={"https://cdn-icons-png.flaticon.com/512/3771/3771046.png"}
+          width={100}
+        />
+        <Text
+          textAlign="center"
+          color={colorSet.text}
+          size={"1.0rem"}
+          font={Font.Bold}
+        >
+          <br />
+          노래 이름
+          <br />
+          <br />
+        </Text>
+        <audio ref={audioRef} src="musics\result\case2.mp3" />
+        <button
+          style={{ width: "100px", height: "55px", border: "none" }}
+          onClick={togglePlayPause}
+        >
+          {isPlaying ? <CiPause1 /> : <CiPlay1 />}
+        </button>
+        <Button
+          onClick={handleSubmit}
+          width="220px"
+          height="50px"
+          variant={ButtonVariant.contained}
+        >
+          <Text size={"1.3rem"}>다시하기</Text>
+        </Button>
       </Flex>
     </>
   );
