@@ -8,7 +8,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Loading from "src/pages/loading/Loading";
 //import QuestionCard from "src/pages/questionCard/QuestionCard";
 import P1 from "src/pages/p1/P1";
 import P2 from "src/pages/p2/P2";
@@ -45,7 +44,6 @@ const router = createBrowserRouter(
       <Route path={"/q4"} element={<Q4 />} />
       <Route path={"/q5"} element={<Q5 />} />
       <Route path={"/q6"} element={<Q6 />} />
-      <Route path={"/loading"} element={<Loading />} />
       <Route path={"/result"} element={<Result />} />
       <Route path={"/result2"} element={<Result2 />} />
       <Route path={"/result3"} element={<Result3 />} />
