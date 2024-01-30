@@ -147,7 +147,7 @@ const QuestionCard = () => {
             max={duration}
             style={{ width: "80%" }}
           ></progress>
-          <Flex gap="180px">
+          <Flex gap="160px">
             <span style={{ fontSize: "0.8rem" }}>
               {formatTime(currentTime)}
             </span>
