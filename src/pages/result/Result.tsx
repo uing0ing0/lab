@@ -111,7 +111,6 @@ const QuestionCard = () => {
         음악감상
         <br />
         <br />
-        <br />
       </Text>
       <Flex flexDirection="column" alignItems="center" gap="20px">
         <Image
@@ -139,8 +138,8 @@ const QuestionCard = () => {
           style={{ width: "80%" }}
         ></progress>
         <Flex gap="180px">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration)}</span>
+          <span style={{ fontSize: "0.8rem" }}>{formatTime(currentTime)}</span>
+          <span style={{ fontSize: "0.8rem" }}>{formatTime(duration)}</span>
         </Flex>
         <Flex gap="10px">
           <button
