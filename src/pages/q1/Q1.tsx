@@ -82,7 +82,6 @@ const QuestionCard = () => {
           size={"1.3rem"}
           font={Font.Bold}
         >
-          <br />
           설정단계
           <br />
           Step 1
@@ -123,7 +122,7 @@ const QuestionCard = () => {
             <Flex gap="20px" justifyContent="center">
               <Button
                 onClick={handleSubmit}
-                width="130px"
+                width="135px"
                 height="50px"
                 variant={ButtonVariant.o}
               >
@@ -133,7 +132,7 @@ const QuestionCard = () => {
               </Button>
               <Button
                 onClick={handleX}
-                width="130px"
+                width="135px"
                 height="50px"
                 variant={ButtonVariant.x}
               >

@@ -58,10 +58,11 @@ const QuestionCard = () => {
         >
           준비단계
           <br />
+          <br />
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
           <Image
-            style={{ marginTop: "30" }}
+            style={{ marginLeft: 0, marginRight: 0 }}
             maxWidth="100%"
             src={"images/11.png"}
           />
