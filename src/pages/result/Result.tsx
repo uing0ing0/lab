@@ -114,7 +114,6 @@ const QuestionCard = () => {
           size={"1.3rem"}
           font={Font.Bold}
         >
-          <br />
           음악감상
           <br />
           <br />
@@ -156,19 +155,19 @@ const QuestionCard = () => {
           </Flex>
           <Flex gap="10px">
             <button
-              style={{ width: "100px", height: "55px", border: "none" }}
+              style={{ width: "50px", height: "50px", border: "none" }}
               onClick={() => handleSeek(false)}
             >
               <IoPlayBack />
             </button>
             <button
-              style={{ width: "100px", height: "55px", border: "none" }}
+              style={{ width: "50px", height: "50px", border: "none" }}
               onClick={togglePlayPause}
             >
               {isPlaying ? <CiPause1 /> : <CiPlay1 />}
             </button>
             <button
-              style={{ width: "100px", height: "55px", border: "none" }}
+              style={{ width: "50px", height: "50px", border: "none" }}
               onClick={() => handleSeek(true)}
             >
               <IoPlayForward />
