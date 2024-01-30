@@ -64,7 +64,7 @@ const QuestionCard = () => {
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
           <Image
-            style={{ marginLeft: 0, marginRight: 0 }}
+            style={{ margin: "0 -30px" }}
             maxWidth="100%"
             src={"images/11.png"}
           />
