@@ -110,7 +110,7 @@ const QuestionCard = () => {
             <FaRegCirclePlay size="100" color="#959595" />
           )}
         </button>
-        <Flex gap="80px" justifyContent="center">
+        <Flex gap="50px" justifyContent="center">
           <Button
             onClick={handleSubmit}
             width="130px"

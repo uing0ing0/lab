@@ -62,7 +62,6 @@ const Button = styled.button<ButtonProps>`
           border-radius: 25px;
 
           left: 50%;
-          transform: translate(-50%);
           bottom: 70px;
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
@@ -77,7 +76,6 @@ const Button = styled.button<ButtonProps>`
           border-radius: 25px;
 
           bottom: 70px;
-          transform: translate(5%);
 
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
@@ -90,7 +88,6 @@ const Button = styled.button<ButtonProps>`
           border-radius: 25px;
 
           bottom: 70px;
-          transform: translate(130%);
 
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;

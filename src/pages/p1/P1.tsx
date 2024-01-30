@@ -56,7 +56,7 @@ const QuestionCard = () => {
           width="220px"
           height="50px"
           variant={ButtonVariant.contained}
-          //justify-content="center"
+          justify-content="center"
         >
           <Text size={"1.3rem"}>Start</Text>
         </Button>
