@@ -119,8 +119,8 @@ const QuestionCard = () => {
               <FaRegCirclePlay size="100" color="#959595" />
             )}
           </button>
-          <div style={{ position: "fixed", bottom: "150px" }}>
-            <Flex gap="50px" justifyContent="center">
+          <div style={{ position: "fixed", bottom: "120px" }}>
+            <Flex gap="20px" justifyContent="center">
               <Button
                 onClick={handleSubmit}
                 width="130px"
