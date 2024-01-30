@@ -58,7 +58,7 @@ const Button = styled.button<ButtonProps>`
       case ButtonVariant.contained:
         return css`
           position: fixed;
-          bottom: 50px;
+          bottom: 150px;
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
           border-radius: 25px;
@@ -73,7 +73,6 @@ const Button = styled.button<ButtonProps>`
           background-color: ${colorSet.primary};
           color: ${colorSet.colorless};
           border-radius: 25px;
-          bottom: 50px;
 
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
@@ -85,7 +84,6 @@ const Button = styled.button<ButtonProps>`
           color: ${colorSet.colorless};
           border-radius: 25px;
 
-          bottom: 50px;
           :hover {
             box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0px 0px 40px;
           }
