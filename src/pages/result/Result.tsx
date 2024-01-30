@@ -97,80 +97,94 @@ const QuestionCard = () => {
       "0",
     )}`;
   };
-
+  const containerStyle = {
+    flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    paddingTop: "100px", // 위쪽 패딩 설정
+    paddingBottom: "150px", // 아래쪽 패딩 설정
+  };
   return (
     <>
       {" "}
-      <Text
-        textAlign="left"
-        color={colorSet.text}
-        size={"1.3rem"}
-        font={Font.Bold}
-      >
-        <br />
-        음악감상
-        <br />
-        <br />
-      </Text>
-      <Flex flexDirection="column" alignItems="center" gap="20px">
-        <Image
-          src={"https://cdn-icons-png.flaticon.com/512/3771/3771046.png"}
-          width={100}
-        />
+      <div style={containerStyle}>
         <Text
-          textAlign="center"
+          textAlign="left"
           color={colorSet.text}
-          size={"1.1rem"}
+          size={"1.3rem"}
           font={Font.Bold}
         >
           <br />
-          노래 이름
-        </Text>
-        <Text textAlign="center" color={colorSet.secondaryText} size={"0.9rem"}>
-          작곡가?
+          음악감상
           <br />
           <br />
         </Text>
-        <audio ref={audioRef} src="musics\result\case1.mp3" />
-        <progress
-          value={currentTime}
-          max={duration}
-          style={{ width: "80%" }}
-        ></progress>
-        <Flex gap="180px">
-          <span style={{ fontSize: "0.8rem" }}>{formatTime(currentTime)}</span>
-          <span style={{ fontSize: "0.8rem" }}>{formatTime(duration)}</span>
-        </Flex>
-        <Flex gap="10px">
-          <button
-            style={{ width: "100px", height: "55px", border: "none" }}
-            onClick={() => handleSeek(false)}
+        <Flex flexDirection="column" alignItems="center" gap="20px">
+          <Image
+            src={"https://cdn-icons-png.flaticon.com/512/3771/3771046.png"}
+            width={100}
+          />
+          <Text
+            textAlign="center"
+            color={colorSet.text}
+            size={"1.1rem"}
+            font={Font.Bold}
           >
-            <IoPlayBack />
-          </button>
-          <button
-            style={{ width: "100px", height: "55px", border: "none" }}
-            onClick={togglePlayPause}
+            <br />
+            노래 이름
+          </Text>
+          <Text
+            textAlign="center"
+            color={colorSet.secondaryText}
+            size={"0.9rem"}
           >
-            {isPlaying ? <CiPause1 /> : <CiPlay1 />}
-          </button>
-          <button
-            style={{ width: "100px", height: "55px", border: "none" }}
-            onClick={() => handleSeek(true)}
-          >
-            <IoPlayForward />
-          </button>
-        </Flex>
+            작곡가?
+            <br />
+            <br />
+          </Text>
+          <audio ref={audioRef} src="musics\result\case1.mp3" />
+          <progress
+            value={currentTime}
+            max={duration}
+            style={{ width: "80%" }}
+          ></progress>
+          <Flex gap="180px">
+            <span style={{ fontSize: "0.8rem" }}>
+              {formatTime(currentTime)}
+            </span>
+            <span style={{ fontSize: "0.8rem" }}>{formatTime(duration)}</span>
+          </Flex>
+          <Flex gap="10px">
+            <button
+              style={{ width: "100px", height: "55px", border: "none" }}
+              onClick={() => handleSeek(false)}
+            >
+              <IoPlayBack />
+            </button>
+            <button
+              style={{ width: "100px", height: "55px", border: "none" }}
+              onClick={togglePlayPause}
+            >
+              {isPlaying ? <CiPause1 /> : <CiPlay1 />}
+            </button>
+            <button
+              style={{ width: "100px", height: "55px", border: "none" }}
+              onClick={() => handleSeek(true)}
+            >
+              <IoPlayForward />
+            </button>
+          </Flex>
 
-        <Button
-          onClick={handleSubmit}
-          width="220px"
-          height="50px"
-          variant={ButtonVariant.contained}
-        >
-          <Text size={"1.3rem"}>다시하기</Text>
-        </Button>
-      </Flex>
+          <Button
+            onClick={handleSubmit}
+            width="220px"
+            height="50px"
+            variant={ButtonVariant.contained}
+          >
+            <Text size={"1.3rem"}>다시하기</Text>
+          </Button>
+        </Flex>
+      </div>
     </>
   );
 };
