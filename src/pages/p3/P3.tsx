@@ -45,8 +45,8 @@ const QuestionCard = () => {
     flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
     paddingLeft: "20px",
     paddingRight: "20px",
-    paddingTop: "50px", // 위쪽 패딩 설정
-    paddingBottom: "50px", // 아래쪽 패딩 설정
+    paddingTop: "100px", // 위쪽 패딩 설정
+    paddingBottom: "150px", // 아래쪽 패딩 설정
   };
   return (
     <>
@@ -57,7 +57,6 @@ const QuestionCard = () => {
           size={"1.3rem"}
           font={Font.Bold}
         >
-          <br />
           준비단계
           <br />
         </Text>
