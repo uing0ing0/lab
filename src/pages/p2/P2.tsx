@@ -59,6 +59,8 @@ const QuestionCard = () => {
           준비단계
           <br />
           <br />
+          <br />
+          <br />
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
           <Image
@@ -67,6 +69,7 @@ const QuestionCard = () => {
             src={"images/11.png"}
           />
           <Text color={colorSet.secondaryText} size={"0.8rem"}>
+            <br />
             블루투스와 연결 되었나요?
           </Text>
 

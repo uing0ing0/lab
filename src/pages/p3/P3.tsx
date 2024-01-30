@@ -63,7 +63,7 @@ const QuestionCard = () => {
         <Text
           textAlign="left"
           color={colorSet.secondaryText}
-          size={"0.8rem"}
+          size={"1.0rem"}
           font={Font.Bold}
         >
           <br />
