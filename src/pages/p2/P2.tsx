@@ -41,8 +41,8 @@ const QuestionCard = () => {
   };
   const containerStyle = {
     flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
-    paddingLeft: "20px",
-    paddingRight: "20px",
+    paddingLeft: "30px",
+    paddingRight: "30px",
     paddingTop: "100px", // 위쪽 패딩 설정
     paddingBottom: "150px", // 아래쪽 패딩 설정
   };
@@ -57,6 +57,7 @@ const QuestionCard = () => {
           font={Font.Bold}
         >
           준비단계
+          <br />
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
           <Image

@@ -21,8 +21,8 @@ const QuestionCard = () => {
   };
   const containerStyle = {
     flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
-    paddingleft: "20px",
-    paddingright: "20px",
+    paddingleft: "30px",
+    paddingright: "30px",
     paddingTop: "100px", // 위쪽 패딩 설정
     paddingBottom: "150px", // 아래쪽 패딩 설정
   };
