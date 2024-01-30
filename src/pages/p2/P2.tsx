@@ -39,43 +39,46 @@ const QuestionCard = () => {
     console.log("Submit");
     navigate("/p3");
   };
+  const containerStyle = {
+    flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingTop: "50px", // 위쪽 패딩 설정
+    paddingBottom: "50px", // 아래쪽 패딩 설정
+  };
+
   return (
     <>
-      <Flex flexDirection="column" alignItems="center" gap="20px">
+      <div style={containerStyle}>
         <Text
           textAlign="left"
           color={colorSet.text}
           size={"1.3rem"}
           font={Font.Bold}
         >
-          <br />
-          <br />
           준비단계
-          <br />
-          <br />
         </Text>
-        <Image
-          maxWidth="100%"
-          width="calc(100% - 30px)"
-          src={"images/11.png"}
-        />
-        <Text color={colorSet.secondaryText} size={"0.8rem"}>
-          <br />
-          <br />
-          블루투스와 연결 되었나요?
-          <br />
-        </Text>
+        <Flex flexDirection="column" alignItems="center" gap="20px">
+          <Image
+            style={{ marginTop: "30" }}
+            maxWidth="100%"
+            src={"images/11.png"}
+          />
+          <Text color={colorSet.secondaryText} size={"0.8rem"}>
+            블루투스와 연결 되었나요?
+          </Text>
 
-        <Button
-          onClick={handleSubmit}
-          width="220px"
-          height="50px"
-          variant={ButtonVariant.contained}
-          justify-content="center"
-        >
-          <Text size={"1.1rem"}>확인</Text>
-        </Button>
-      </Flex>
+          <Button
+            onClick={handleSubmit}
+            width="220px"
+            height="50px"
+            variant={ButtonVariant.contained}
+            justify-content="center"
+          >
+            <Text size={"1.1rem"}>확인</Text>
+          </Button>
+        </Flex>
+      </div>
     </>
   );
 };

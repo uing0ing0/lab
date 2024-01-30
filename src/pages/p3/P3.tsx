@@ -40,9 +40,17 @@ const QuestionCard = () => {
     console.log("Submit");
     navigate("/q1");
   };
+
+  const containerStyle = {
+    flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingTop: "50px", // 위쪽 패딩 설정
+    paddingBottom: "50px", // 아래쪽 패딩 설정
+  };
   return (
     <>
-      <Flex flexDirection="column" alignItems="center" gap="20px">
+      <div style={containerStyle}>
         <Text
           textAlign="left"
           color={colorSet.text}
@@ -68,19 +76,20 @@ const QuestionCard = () => {
         <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
           <br />
         </Text>
+        <Flex flexDirection="column" alignItems="center" gap="20px">
+          <GrVolumeControl size="180" color="#959595" />
 
-        <GrVolumeControl size="180" color="#959595" />
-
-        <Button
-          onClick={handleSubmit}
-          width="220px"
-          height="50px"
-          variant={ButtonVariant.contained}
-          justify-content="center"
-        >
-          <Text size={"1.1rem"}>확인</Text>
-        </Button>
-      </Flex>
+          <Button
+            onClick={handleSubmit}
+            width="220px"
+            height="50px"
+            variant={ButtonVariant.contained}
+            justify-content="center"
+          >
+            <Text size={"1.1rem"}>확인</Text>
+          </Button>
+        </Flex>
+      </div>
     </>
   );
 };
