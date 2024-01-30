@@ -86,14 +86,10 @@ const QuestionCard = () => {
           <br />
           Step 1
         </Text>
-        <Text
-          textAlign="left"
-          color={colorSet.secondaryText}
-          size={"1.0rem"}
-          font={Font.Bold}
-        >
+        <Text textAlign="left" color={colorSet.secondaryText} size={"1.0rem"}>
           <br />
-          소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
+          소리를 듣고 들리면 O 안들리면 X <br />
+          버튼을 눌러주세요.
           <br />
           <br />
         </Text>

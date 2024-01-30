@@ -60,12 +60,7 @@ const QuestionCard = () => {
           준비단계
           <br />
         </Text>
-        <Text
-          textAlign="left"
-          color={colorSet.secondaryText}
-          size={"1.0rem"}
-          font={Font.Bold}
-        >
+        <Text textAlign="left" color={colorSet.secondaryText} size={"1.0rem"}>
           <br />
           소리 크기가 충분한지
           <br /> 확인해주세요.
