@@ -100,19 +100,20 @@ const QuestionCard = () => {
 
   return (
     <>
+      {" "}
+      <Text
+        textAlign="left"
+        color={colorSet.text}
+        size={"1.3rem"}
+        font={Font.Bold}
+      >
+        <br />
+        음악감상
+        <br />
+        <br />
+        <br />
+      </Text>
       <Flex flexDirection="column" alignItems="center" gap="20px">
-        <Text
-          textAlign="left"
-          color={colorSet.text}
-          size={"1.3rem"}
-          font={Font.Bold}
-        >
-          <br />
-          음악감상
-          <br />
-          <br />
-          <br />
-        </Text>
         <Image
           src={"https://cdn-icons-png.flaticon.com/512/3771/3771046.png"}
           width={100}
@@ -120,19 +121,13 @@ const QuestionCard = () => {
         <Text
           textAlign="center"
           color={colorSet.text}
-          size={"1.0rem"}
+          size={"1.1rem"}
           font={Font.Bold}
         >
           <br />
           노래 이름
         </Text>
-        <Text
-          textAlign="center"
-          color={colorSet.secondaryText}
-          size={"0.8rem"}
-          font={Font.Bold}
-        >
-          <br />
+        <Text textAlign="center" color={colorSet.secondaryText} size={"0.9rem"}>
           작곡가?
           <br />
           <br />
@@ -147,7 +142,7 @@ const QuestionCard = () => {
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </Flex>
-        <Flex gap="20px">
+        <Flex gap="10px">
           <button
             style={{ width: "100px", height: "55px", border: "none" }}
             onClick={() => handleSeek(false)}

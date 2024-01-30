@@ -63,11 +63,7 @@ const QuestionCard = () => {
           <br />
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
-          <Image
-            style={{ margin: "0 -30px" }}
-            maxWidth="100%"
-            src={"images/11.png"}
-          />
+          <Image maxWidth="100%" src={"images/11.png"} />
           <Text color={colorSet.secondaryText} size={"0.8rem"}>
             <br />
             블루투스와 연결 되었나요?
