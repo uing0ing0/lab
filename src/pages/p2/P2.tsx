@@ -53,7 +53,7 @@ const QuestionCard = () => {
         <Text
           textAlign="left"
           color={colorSet.text}
-          size={"1.3rem"}
+          size={"1.4rem"}
           font={Font.Bold}
         >
           준비단계
@@ -64,7 +64,7 @@ const QuestionCard = () => {
         </Text>
         <Flex flexDirection="column" alignItems="center" gap="20px">
           <Image maxWidth="100%" src={"images/11.png"} />
-          <Text color={colorSet.secondaryText} size={"0.8rem"}>
+          <Text color={colorSet.secondaryText} size={"0.9rem"}>
             <br />
             블루투스와 연결 되었나요?
           </Text>

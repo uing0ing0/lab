@@ -101,7 +101,7 @@ const QuestionCard = () => {
     flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
     paddingLeft: "30px",
     paddingRight: "30px",
-    paddingTop: "100px", // 위쪽 패딩 설정
+    paddingTop: "90px", // 위쪽 패딩 설정
     paddingBottom: "150px", // 아래쪽 패딩 설정
   };
   return (
@@ -111,7 +111,7 @@ const QuestionCard = () => {
         <Text
           textAlign="left"
           color={colorSet.text}
-          size={"1.3rem"}
+          size={"1.4rem"}
           font={Font.Bold}
         >
           음악감상
@@ -145,13 +145,22 @@ const QuestionCard = () => {
           <progress
             value={currentTime}
             max={duration}
-            style={{ width: "80%" }}
+            style={{
+              width: "90%",
+              height: "2.5px",
+              border: "none",
+              color: colorSet.primary,
+              backgroundColor: colorSet.secondaryText,
+              borderRadius: "5px",
+            }}
           ></progress>
-          <Flex gap="160px">
-            <span style={{ fontSize: "0.8rem" }}>
+          <Flex gap="170px">
+            <span style={{ fontSize: "0.8rem", color: colorSet.secondaryText }}>
               {formatTime(currentTime)}
             </span>
-            <span style={{ fontSize: "0.8rem" }}>{formatTime(duration)}</span>
+            <span style={{ fontSize: "0.8rem", color: colorSet.secondaryText }}>
+              {formatTime(duration)}
+            </span>
           </Flex>
           <Flex gap="10px">
             <button

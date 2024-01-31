@@ -79,7 +79,7 @@ const QuestionCard = () => {
         <Text
           textAlign="left"
           color={colorSet.text}
-          size={"1.3rem"}
+          size={"1.4rem"}
           font={Font.Bold}
         >
           설정단계
