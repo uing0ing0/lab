@@ -39,17 +39,24 @@ const QuestionCard = () => {
     console.log("Submit");
     navigate("/p3");
   };
-  const containerStyle = {
+  const containerStyle1 = {
     flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
     paddingLeft: "30px",
     paddingRight: "30px",
     paddingTop: "100px", // 위쪽 패딩 설정
+    paddingBottom: "0px", // 아래쪽 패딩 설정
+  };
+  const containerStyle2 = {
+    flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    paddingTop: "0px", // 위쪽 패딩 설정
     paddingBottom: "150px", // 아래쪽 패딩 설정
   };
 
   return (
     <>
-      <div style={containerStyle}>
+      <div style={containerStyle1}>
         <Text
           textAlign="left"
           color={colorSet.text}
@@ -62,8 +69,10 @@ const QuestionCard = () => {
           <br />
           <br />
         </Text>
+      </div>
+      <Image maxWidth="100%" src={"images/11.png"} />
+      <div style={containerStyle2}>
         <Flex flexDirection="column" alignItems="center" gap="20px">
-          <Image maxWidth="100%" src={"images/11.png"} />
           <Text color={colorSet.secondaryText} size={"0.9rem"}>
             <br />
             블루투스와 연결 되었나요?

@@ -138,7 +138,7 @@ const QuestionCard = () => {
             color={colorSet.secondaryText}
             size={"0.9rem"}
           >
-            작곡가?
+            작곡가
             <br />
             <br />
           </Text>
