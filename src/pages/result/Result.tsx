@@ -104,6 +104,7 @@ const QuestionCard = () => {
     paddingTop: "90px", // 위쪽 패딩 설정
     paddingBottom: "150px", // 아래쪽 패딩 설정
   };
+
   return (
     <>
       {" "}
@@ -149,11 +150,25 @@ const QuestionCard = () => {
               width: "90%",
               height: "2.5px",
               border: "none",
-              color: colorSet.primary,
-              backgroundColor: colorSet.secondaryText,
               borderRadius: "5px",
             }}
           ></progress>
+          <style>
+            {`
+          progress {
+            -webkit-appearance: none;
+          }
+          progress::-webkit-progress-bar {
+            background-color:#E0E0E0;
+            border-radius: 5px; 
+          }
+
+          progress::-webkit-progress-value {
+            background-color: ${colorSet.primary};
+            border-radius: 5px; 
+          }
+        `}
+          </style>
           <Flex gap="170px">
             <span style={{ fontSize: "0.8rem", color: colorSet.secondaryText }}>
               {formatTime(currentTime)}
