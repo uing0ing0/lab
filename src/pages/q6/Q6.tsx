@@ -58,7 +58,7 @@ const QuestionCard = () => {
 
   const handleSubmit = () => {
     console.log("Submit");
-    navigate("/q7");
+    navigate("/result7");
   };
   const handleX = () => {
     console.log("Submit", location.pathname);
