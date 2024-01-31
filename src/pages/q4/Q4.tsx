@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { FaRegCirclePause } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Button, { ButtonVariant } from "src/atoms/button/Button";
 import Flex from "src/atoms/containers/flex/Flex";
 import Image from "src/atoms/image/Image";
@@ -39,6 +40,7 @@ const BookCard = styled.div<PanelProps>`
 
 const QuestionCard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -59,77 +61,83 @@ const QuestionCard = () => {
     navigate("/q5");
   };
   const handleX = () => {
-    console.log("Submit");
+    console.log("Submit", location.pathname);
     navigate("/result4");
+  };
+  const containerStyle = {
+    flex: 1, // 페이지 내용이 컨테이너를 채우도록 함
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    paddingTop: "100px", // 위쪽 패딩 설정
+    paddingBottom: "150px", // 아래쪽 패딩 설정
   };
 
   return (
     <>
-      <Flex flexDirection="column" alignItems="center" gap="20px">
+      {" "}
+      <div style={containerStyle}>
         <Text
           textAlign="left"
           color={colorSet.text}
-          size={"1.3rem"}
+          size={"1.4rem"}
           font={Font.Bold}
         >
-          <br />
           설정단계
           <br />
           Step 4
         </Text>
-        <Text
-          textAlign="left"
-          color={colorSet.secondaryText}
-          size={"0.8rem"}
-          font={Font.Bold}
-        >
+        <Text textAlign="left" color={colorSet.secondaryText} size={"1.0rem"}>
           <br />
-          소리를 듣고 들리면 O 안들리면 X 버튼을 눌러주세요.
+          소리를 듣고 들리면 O 안들리면 X <br />
+          버튼을 눌러주세요.
           <br />
           <br />
         </Text>
+        <Flex flexDirection="column" alignItems="center" gap="20px">
+          <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
+            <br />
+          </Text>
 
-        <Text color={colorSet.text} size={"2.0rem"} font={Font.Bold}>
-          <br />
-        </Text>
-
-        <audio ref={audioRef} src="musics\test\2000Hz.mp3" />
-        <button
-          style={{
-            color: "#ffffff",
-            width: "150px",
-            height: "150px",
-            border: "none",
-          }}
-          onClick={togglePlayPause}
-        >
-          {isPlaying ? (
-            <FaRegCirclePause size="100" color="#959595" />
-          ) : (
-            <FaRegCirclePlay size="100" color="#959595" />
-          )}
-        </button>
-        <Flex gap="20px">
-          <Button
-            onClick={handleSubmit}
-            width="130px"
-            height="50px"
-            variant={ButtonVariant.o}
+          <audio ref={audioRef} src="musics\test\250Hz.mp3" />
+          <button
+            style={{
+              color: "#ffffff",
+              width: "150px",
+              height: "150px",
+              border: "none",
+            }}
+            onClick={togglePlayPause}
           >
-            <Text color={colorSet.colorless} size={"1.0rem"}>
-              O
-            </Text>
-          </Button>
-          <Button
-            onClick={handleX}
-            width="130px"
-            height="50px"
-            variant={ButtonVariant.x}
-          >
-            <Text size={"1.0rem"}>X</Text>
-          </Button>
+            {isPlaying ? (
+              <FaRegCirclePause size="100" color="#959595" />
+            ) : (
+              <FaRegCirclePlay size="100" color="#959595" />
+            )}
+          </button>
+          <div style={{ position: "fixed", bottom: "120px" }}>
+            <Flex gap="20px" justifyContent="center">
+              <Button
+                onClick={handleSubmit}
+                width="135px"
+                height="50px"
+                variant={ButtonVariant.o}
+              >
+                <Text color={colorSet.colorless} size={"1.0rem"}>
+                  O
+                </Text>
+              </Button>
+              <Button
+                onClick={handleX}
+                width="135px"
+                height="50px"
+                variant={ButtonVariant.x}
+              >
+                <Text size={"1.0rem"}>X</Text>
+              </Button>
+            </Flex>
+          </div>
         </Flex>
-      </Flex>
+      </div>
     </>
   );
 };
