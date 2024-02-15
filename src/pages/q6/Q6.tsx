@@ -105,6 +105,7 @@ const QuestionCard = () => {
               width: "150px",
               height: "150px",
               border: "none",
+              backgroundColor: "transparent",
             }}
             onClick={togglePlayPause}
           >

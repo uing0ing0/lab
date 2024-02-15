@@ -105,11 +105,16 @@ const QuestionCard = () => {
               width: "150px",
               height: "150px",
               border: "none",
+              backgroundColor: "transparent",
             }}
             onClick={togglePlayPause}
           >
             {isPlaying ? (
-              <FaRegCirclePause size="100" color="#959595" />
+              <FaRegCirclePause
+                size="100"
+                color="#959595"
+                background-color="transparent"
+              />
             ) : (
               <FaRegCirclePlay size="100" color="#959595" />
             )}

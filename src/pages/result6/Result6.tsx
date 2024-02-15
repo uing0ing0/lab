@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { CiPlay1 } from "react-icons/ci";
-import { CiPause1 } from "react-icons/ci";
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
 import { IoPlayBack } from "react-icons/io5";
 import { IoPlayForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
@@ -179,22 +179,38 @@ const QuestionCard = () => {
           </Flex>
           <Flex gap="10px">
             <button
-              style={{ width: "50px", height: "50px", border: "none" }}
+              style={{
+                width: "50px",
+                height: "50px",
+                border: "none",
+                backgroundColor: "transparent",
+              }}
               onClick={() => handleSeek(false)}
             >
-              <IoPlayBack />
+              <IoPlayBack color="#aaaaaa" />
             </button>
             <button
-              style={{ width: "50px", height: "50px", border: "none" }}
+              style={{
+                width: "50px",
+                height: "50px",
+                border: "none",
+                borderRadius: "50%",
+                backgroundColor: colorSet.aa,
+              }}
               onClick={togglePlayPause}
             >
-              {isPlaying ? <CiPause1 /> : <CiPlay1 />}
+              {isPlaying ? <FaPause color="#fff" /> : <FaPlay color="#fff" />}
             </button>
             <button
-              style={{ width: "50px", height: "50px", border: "none" }}
+              style={{
+                width: "50px",
+                height: "50px",
+                border: "none",
+                backgroundColor: "transparent",
+              }}
               onClick={() => handleSeek(true)}
             >
-              <IoPlayForward />
+              <IoPlayForward color="#aaaaaa" />
             </button>
           </Flex>
 

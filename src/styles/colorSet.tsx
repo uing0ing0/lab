@@ -9,6 +9,7 @@ const colorSet = {
   deselected: "#E9E9E9",
   placeholder: "#CFD1D3",
   colorless: "#FFFFFF", // CSS 기본 "white"과의 혼동을 피하기 위해 "colorless"로 표기
+  aa: "#aaaaaa",
 
   red: "#FF4100",
   yellow: "#FFCB58",
